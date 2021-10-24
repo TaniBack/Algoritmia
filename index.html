@@ -60,10 +60,17 @@ algoritmLineThree(3,5)
 
 
 /*Escriba un programa que pida al usuario ingresar un usuario y una contraseña, y le indique si ha validado o no, debemos tener mínimo 5 usuarios en el Local Storage (cargados previamente por el programa, con formato a elegir por el alumno) y usarlos para saber si el usuario ha accedido o no.*/
-localStorage.setItem('user', 'Taniu')
-localStorage.setItem('password', 'qwerty')
-// localStorage.setItem('user', 'Alex')
-// localStorage.setItem('password', 'qwerty')
+localStorage.setItem('users',
+    JSON.stringify({
+        0:{
+            user: "Taniu",
+            password: "qwerty",        
+        },
+        1:{
+            user: "Alex",
+            password: "qwerty",        
+        },
+    }))
 
 let createForm = () => {
 let formTitle = document.createElement("form");            
@@ -99,13 +106,17 @@ let formPasswordButton = document.createElement("input");
 }   
 createForm()
 
-let user= localStorage.getItem("user")
+// let user= localStorage.getItem("users")
+let userLS = JSON.parse(localStorage.getItem("users"))
 let userF= document.getElementById("fname")
-let password= localStorage.getItem("password")
+// let password= localStorage.getItem("password")
 let passwordF= document.getElementById("fpassword")
 
+console.log(userLS.user)
+
 let processFormData = () => {
-    if (userF.value === user && passwordF.value === password){
+    console.log(userLS.user)
+    if (userF.value === userLS.user && passwordF.value === userLS.password){
         alert("Ejercicio 6 - Login correcto")
     }
     else {
