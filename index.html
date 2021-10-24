@@ -47,14 +47,14 @@ let result = " ";
     }
 algoritmLineThree(3,5)
 /*Escriba un programa que dibuje el triángulo del tamaño indicado por el usuario de acuerdo al ejemplo */
-const algoritmLineFour = (numheight) => {
-    let startLine = 0
-        for (let i = 0; i<numheight; i++) {
-            startLine++ 
-            }
-        console.log("Ejercicio 4 " + result)
-        }
-algoritmLineFour(3,5)
+// const algoritmLineFour = (numheight) => {
+//     let startLine = 0
+//         for (let i = 0; i<numheight; i++) {
+//             startLine++ 
+//             }
+//         console.log("Ejercicio 4 " + result)
+//         }
+// algoritmLineFour(3,5)
 
 /*Escriba un programa que dibuje el hexágono del tamaño indicado por el usuario */
 
@@ -106,10 +106,10 @@ let passwordF= document.getElementById("fpassword")
 
 let processFormData = () => {
     if (userF.value === user && passwordF.value === password){
-        alert("Login correcto")
+        alert("Ejercicio 6 - Login correcto")
     }
     else {
-        alert("Login incorrecto")
+        alert("Ejercicio 6 - Login incorrecto")
     }
 }
 
@@ -117,8 +117,6 @@ document.getElementById("form_button").addEventListener("click", processFormData
 
 
 /*Ten precargado en un array 10 números e indica si uno pedido al usuario existe y en qué posición está.*/
-let myNumbers = [1, 4, 5, 14, 23, 34, 45, 56, 68, 77]
-
 let createFormTwo = () => {
 let formTitleTwo = document.createElement("form");            
         document.body.appendChild(formTitleTwo);  
@@ -142,14 +140,19 @@ let formPasswordButton = document.createElement("input");
 }   
 createFormTwo()
 
-let numberF= document.getElementById("fnumber")
+let myNumbers = [1, 4, 5, 14, 23, 34, 45, 56, 68, 77]
+let numberF= document.getElementById("fnumber").value
+
 
 let processNumberFormData = () => {
-    if (numberF.value === myNumbers.exists()){
-        alert("Existe")
-    }
-    else {
-        alert("No existe")
+    for (let i = 0 ; i < myNumbers.length; i++){
+        if (numberF == myNumbers){
+            alert("Ejercicio 7 - Existe")
+        }
+        else {
+            alert("Ejercicio 7 -No existe")
+        }
+    break
     }
 }
 
@@ -157,10 +160,12 @@ document.getElementById("number_form_button").addEventListener("click", processN
 
 
 /*Ten precargado en un array 20 números y ordénalo.*/
-let myOtherNumbers = [11, 44, 2, 5, 14, 3, 34, 4, 1, 56, 68, 43, 77, 22]
+let myOtherNumbers = [11, 33, 120, 390, 43, 44, 2, 25, 6, 69, 14, 3, 434, 4, 1, 56, 68, 43, 77, 22]
+console.log("Ejercicio 8. Ordenar numeros: " + myOtherNumbers)
 console.log(myOtherNumbers.sort(function(a, b){return a-b}))
 
 /*Crea un JSON que contenga la siguiente información de la manera que te parezca óptima. Debes escribirlo en un fichero de texto con extensión ".json", no es necesario un programa asociado.*/
+//Crado en un doc .json aparte 
 
 
     </script>
