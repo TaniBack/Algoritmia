@@ -142,12 +142,15 @@ let formPasswordButton = document.createElement("input");
 }   
 createFormTwo()
 
+let numberF= document.getElementById("fnumber")
+
 let processNumberFormData = () => {
-  if(myNumbers.exists()){
-  alert('Existe');
-    }else{
-    alert('No existe');
-    }  
+    if (numberF.value === myNumbers.exists()){
+        alert("Existe")
+    }
+    else {
+        alert("No existe")
+    }
 }
 
 document.getElementById("number_form_button").addEventListener("click", processNumberFormData);
@@ -159,6 +162,6 @@ console.log(myOtherNumbers.sort(function(a, b){return a-b}))
 
 /*Crea un JSON que contenga la siguiente información de la manera que te parezca óptima. Debes escribirlo en un fichero de texto con extensión ".json", no es necesario un programa asociado.*/
 
+
     </script>
 </body>
-</html>
